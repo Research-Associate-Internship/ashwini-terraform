@@ -1,21 +1,17 @@
 pipeline {
-
     parameters {
         booleanParam(name: 'autoApprove', defaultValue: false, description: 'Automatically run apply after generating plan?')
     } 
     environment {
         AWS_ACCESS_KEY_ID     = credentials('AWS_ACCESS_KEY_ID')
     }
-
-   agent  any
+    agent  any
     stages {
         stage('checkout') {
             steps {
                     checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Research-Associate-Internship/ashwini-terraform.git']])
                     }
                 }
-            }
-
         stage('Plan') {
             steps {
                 sh 'pwd;cd terraform/ ; terraform init'
@@ -38,10 +34,12 @@ pipeline {
                }
            }
        }
-
-        stage('Apply') {
+       stage('Apply') {
             steps {
                 sh "pwd;cd terraform/ ; terraform apply -input=false tfplan"
             }
         }
     }
+}
+
+    
