@@ -9,3 +9,7 @@ resource "aws_instance" "first" {
       Name = "TF-Instance"
   }
 }
+resource "aws_ec2_instance_state" "first" {
+  instance_id = aws_instance.first.id
+  state       = "stopped"
+}
