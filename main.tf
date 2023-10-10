@@ -8,8 +8,7 @@ resource "aws_instance" "first" {
       Name = "TF-Instance"
   }
 }
-resource "aws_default_vpc" "default" {
-  tags = {
-    Name = "Default VPC"
-  }
+import {
+  to = aws_default_vpc.default
+  id = "vpc-005db026359877d5e"
 }
