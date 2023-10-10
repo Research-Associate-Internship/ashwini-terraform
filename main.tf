@@ -10,6 +10,6 @@ resource "aws_instance" "first" {
   }
 }
 resource "aws_ec2_instance_state" "first" {
-  instance_id = aws_instance.test.id
+  instance_id = aws_instance.first.id
   state       = "stopped"
 }
