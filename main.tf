@@ -8,7 +8,8 @@ resource "aws_instance" "first" {
       Name = "TF-Instance"
   }
 }
-import {
-  to = aws_default_vpc.default
-  id = "vpc-005db026359877d5e"
+resource "aws_default_vpc" "default" {
+  tags = {
+    Name = "DevSecOps-vpc"
+  }
 }
