@@ -8,3 +8,8 @@ resource "aws_instance" "first" {
       Name = "TF-Instance"
   }
 }
+resource "aws_default_vpc" "default" {
+  tags = {
+    Name = "Default VPC"
+  }
+}
