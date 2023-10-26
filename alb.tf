@@ -10,12 +10,6 @@ resource "aws_lb" "rac3-hashicorp" {
     "subnet-0466b06d40b97619e"
   ]
 
-  tags = {
-    Department = "DevSecOps Associate"
-    Creation   = "terraform"
-    Project    = "intern"
-  }
-
 }
 
 resource "aws_lb_target_group" "rac3-hashicorp" {
@@ -26,12 +20,6 @@ resource "aws_lb_target_group" "rac3-hashicorp" {
 
   health_check {
     path = "/"
-  }
-
-  tags = {
-    Department = "DevSecOps Associate"
-    Creation   = "terraform"
-    Project    = "intern"
   }
 
 }
