@@ -7,6 +7,6 @@ resource "aws_instance" "Hashicorp-instance" {
   subnet_id = "subnet-0860b49c7e7abaa7a"
   key_name = "docker-jenkins"
   tags = {
-      Name = "HashiCorp-Instance"
+    Name       = "HashiCorp-Instance"
   }
 }
