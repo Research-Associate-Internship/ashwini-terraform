@@ -39,7 +39,7 @@ resource "aws_lb_target_group" "rac3-hashicorp" {
 #instance must be running to attach
 resource "aws_lb_target_group_attachment" "rac3-hashicorp-attach" {
   target_group_arn = aws_lb_target_group.rac3-hashicorp.arn
-  target_id        = aws_instance.HashiCorp-Instance.id
+  target_id        = aws_instance.Hashicorp-instance.id
   port             = 8080
 }
 
