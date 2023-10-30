@@ -4,7 +4,7 @@ resource "aws_route53_record" "rac3-hashicorp" {
   type    = "A"
   alias {
     name                   = aws_lb.rac3-hashicorp.dns_name
-    zone_id                = "Z35SXDOTRQ7X7K"
+    zone_id                = aws_lb.rac3-hashicorp.zone_id
     evaluate_target_health = true
   }
 }
