@@ -1,4 +1,4 @@
-resource "aws_route53_record" "hashicorp-vault" {
+resource "aws_route53_record" "rac3-hashicorp" {
   zone_id = "Z03309881PN2JZ6GGLOJ8"
   name    = "vault-rac3.axle-interns.com"
   type    = "A"
