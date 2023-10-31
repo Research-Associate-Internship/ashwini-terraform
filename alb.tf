@@ -33,7 +33,7 @@ resource "aws_lb_target_group_attachment" "rac3-hashicorp-attach" {
 
 resource "aws_lb_listener" "hashicorp-tg" {
   load_balancer_arn = aws_lb.rac3-hashicorp.arn
-  port              = "8200"
+  port              = "80"
   protocol          = "HTTP"
 
   default_action {
