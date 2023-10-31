@@ -51,7 +51,7 @@ resource "aws_lb_listener" "hashicorp-tg-443" {
   load_balancer_arn = aws_lb.rac3-hashicorp.arn
   port              = "443"
   protocol          = "HTTPS"
-  certificate_arn   = "arn:aws:acm:us-east-1:853931821519:certificate/85b58583-2b68-4dd2-911d-51ac8d8b3b11"
+  certificate_arn   = "arn:aws:acm:us-east-1:853931821519:certificate/e2da0f86-f6cb-4252-b68f-92785c07613b"
 
   default_action {
     type             = "forward"
