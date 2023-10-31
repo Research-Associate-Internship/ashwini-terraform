@@ -3,7 +3,7 @@ resource "aws_lb" "rac3-hashicorp" {
   internal           = false
   load_balancer_type = "application"
 
-  security_groups = ["sg-04a74af76e4a86c91"]
+  security_groups = ["sg-04a52f85b9f0df4c8"]
 
   subnets = [
     "subnet-0860b49c7e7abaa7a",
