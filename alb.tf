@@ -19,7 +19,7 @@ resource "aws_lb_target_group" "rac3-hashicorp" {
   vpc_id   = "vpc-005db026359877d5e"
 
   health_check {
-    path = "/"
+    path = "/login"
   }
 
 }
