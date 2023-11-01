@@ -5,13 +5,7 @@ resource "aws_lb" "rac3-hashicorp" {
 
   security_groups = ["sg-04a52f85b9f0df4c8"]
   vpc_config {
-
-    subnet_ids = 
-    "subnet-0860b49c7e7abaa7a",
-    "subnet-0466b06d40b97619e",
-    "subnet-0f2c70f65b8db52ff",
-    "subnet-0bc69b49810210192"
-  ]
+    subnet_ids =["subnet-0860b49c7e7abaa7a","subnet-0466b06d40b97619e","subnet-0f2c70f65b8db52ff","subnet-0bc69b49810210192"]
   }
 
 }
